@@ -1,0 +1,218 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+        <title>
+            Signup epent
+        </title>
+        <style>
+             @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+                background: rgb(83,249,118);
+                background: linear-gradient(70deg, rgba(83,249,118,1) 19%, rgba(0,236,177,1) 49%, rgba(44,248,249,1) 80%);
+                height: 100vh;
+                overflow: hidden;
+            }
+            .center{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 400px;
+                height: 500px;
+                background: white;
+                border-radius: 10px;
+                box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+            }
+            .upper{
+                padding-bottom: 0px;
+                border-bottom: 1px solid silver;
+            }
+            .center h1{
+                color: #5DB075;
+                text-align: right;
+                font-size: 18px;
+                padding: 10px 0;
+                padding-right: 15px;
+                padding-bottom: 0;
+                padding-top: 8px;
+            }
+            
+            .epentLogo{
+                align-items: center;
+                width: 80px;
+                padding: 3px;
+                padding-bottom: 0px;
+                
+            }
+            
+            .text-underLogo{
+                font-size: 12px;
+                text-align: left;
+                color: #a6a6a6;
+                line-height: 15px;
+                padding-top: 15px;
+                padding-left: 5px;
+                padding-right: 25px;
+            }
+
+            .center form{
+                padding: 0 40px;
+                box-sizing: border-box;
+            }
+
+            form .form-input{
+                position: relative;
+                border-bottom: 2px solid #adadad;
+                margin: 30px 0;
+            }
+            .form-input input{
+                width: 100%;
+                padding: 0 5px;
+                height: 40px;
+                font-size: 16px;
+
+                border: none;
+                background: none;
+                outline: none;
+            }
+            .form-input label{
+                font-size: 16px;
+                position: absolute;
+                top: 50%;
+                left: 5px;
+                color: #adadad;
+                transform: translateY(-50%);
+                pointer-events: none;
+                transition: 0.5s;
+            }
+            .form-input span::before{
+                content: '';
+                position: absolute;
+                top: 40px;
+                left: 0px;
+                width: 0%;
+                height: 2px;
+                background: #5DB075;
+                transition: 0.5s;
+            }
+            .form-input input:focus ~ label,
+            .form-input input:valid ~ label{
+                top: -5px;
+                color: #5DB075;
+            }
+            .form-input input:focus ~ span::before,
+            .form-input input:valid ~ span::before{
+               width: 100%;
+            }
+       
+            .Selanjutnya{
+                margin-left: 70px;
+                margin-top: 10px;
+                
+                width: 62%;
+                height: 35px;
+                border: 1px solid;
+                background: #5DB075;
+                border-radius: 25px;
+                font-size: 14px;
+                color: #e9f4fb;
+                font-weight: 500;
+                
+                cursor: pointer;
+                outline: none;
+                transition: background-color 0.5s,
+                color 0.9s;
+
+            }
+            .Kembali{
+                margin-left: 0px;
+                margin-top: 10px;
+                
+                width: 60%;
+                height: 35px;
+                border: 1px solid;
+                background: #5DB075;
+                border-radius: 25px;
+                font-size: 14px;
+                color: #e9f4fb;
+                font-weight: 500;
+                
+                cursor: pointer;
+                outline: none;
+                transition: background-color 0.5s,
+                color 0.9s;
+            }
+            input[type="submit"]:hover{
+                border-color: #5DB075;
+                color: #5DB075;
+                background-color: #e9f4fb;
+                
+            }
+            input[type="submit"]:active{
+                opacity: 0.7;
+            }
+       
+            
+        </style>
+{% endblock meta %}
+
+{% block content %}
+        <div class="center">
+
+            <div class="upper">
+                <h1>Signup</h1>
+                <div class="header" style="display: grid; grid-template-columns: 100px 1fr;">
+                    <img class="epentLogo" src="thumbnail/logoEpent-tulisan.png">
+                    <div class="text-underLogo">
+                        <p>
+                            The acquisition of funds will
+                            automatically accumulate and you
+                            can monitor remaining targets
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+           
+              
+
+            <form method="POST">
+                <div class="form-input">
+                    <input type="text" required>
+                    <span></span>
+                    <label>Username</label>
+                </div>
+
+                <div class="form-input">
+                    <input type="password" required>
+                    <span></span>
+                    <label>Password</label>
+                </div>
+
+                <div class="form-input">
+                    <input type="password" required>
+                    <span></span>
+                    <label>Ulangi Password</label>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr";>
+                    <input class="Kembali" type="submit"  value="Kembali">
+                    <input class="Selanjutnya" type="submit"  value="Selanjutnya">
+                </div>
+                
+
+
+            </form>
+
+            
+        </div>
+{% endblock content %}
