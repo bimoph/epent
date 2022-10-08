@@ -1,0 +1,448 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epent</title>
+
+    <!-- font type ubuntu connect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- css connect -->
+    <link rel="stylesheet" href="css-file/landing-page-body.css">
+    <link rel="stylesheet" href="css-file/landing-page-header.css">
+    <link rel="stylesheet" href="css-file/landing-page-beranda-clone.css">
+    <link rel="stylesheet" href="css-file/landing-page-mission.css">
+    <link rel="stylesheet" href="css-file/landing-page-founder.css">
+    <link rel="stylesheet" href="css-file/landing-page-sponsor.css">
+    <link rel="stylesheet" href="css-file/landing-page-event.css">
+
+
+</head>
+
+{% endblock meta %}
+
+{% block content %}
+
+    <!-- Bagian Header -->
+    <div class="header">
+
+        <!-- Epent header-logo -->
+        <div class="header-logo">
+            <img class="header-icon-epent" src="icon/epent-nonbackground.png">
+        </div>
+
+        <!-- Bar navigasi menu -->
+        <div class="header-navbar">
+            <ul>
+                <li><a>Beranda</a></li>
+                <li><a>Sponsor</a></li>
+                <li><a>Event</a></li>
+                <li><a>About Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Tombol Login dan Signin-->
+        <div class="header-button">
+            <button class="header-button-login">Login</button>
+            <button class="header-button-signin">Signin</button>
+        </div>
+    </div>
+
+    <!-- Bagian Konten  1-->
+    <div class="content">
+
+        <!-- Konten selamat datang -->
+        <div class="content-welcome">
+            
+            <!-- Konten selamat datang Event -->
+            <div class="content-welcome-event">
+                <div class="top-text">Event Organizer</div>
+
+                <!-- slider part start -->
+                <div class="frame-slide">
+                    <div class="slides">
+                        <!-- radio button start -->
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+    
+                        <div class="content-welcome-upper first">
+                            <img class="content-welcome-thumbnail" src="thumbnail/Scenes/communication, transportation _ fly, airplane, paper, memo, man, people, transport, delivery.svg" alt="">
+                            <h1>Explore</h1>
+                            <h3>Connect with companies all over
+                                country. The more connections, the
+                                more likely your event will get funding</h3>
+                        </div>
+    
+                        <div class="content-welcome-upper">
+                            <img class="content-welcome-thumbnail" src="thumbnail/Scenes/leisure _ relax, chill, sitting, drink, beverage, home, armchair, furniture, plant, decoration.svg" alt="">
+                            <h1>Find</h1>
+                            <h3>Easily find perfect sponsors for
+                                your event </h3>
+                        </div>
+    
+                        <div class="content-welcome-upper">
+                            <img class="content-welcome-thumbnail" src="thumbnail/Scenes/marketing _ promotion, protest, megaphone, woman, event, city.svg" alt="">
+                            <h1>Track</h1>
+                            <h3>The acquisition of funds will
+                                automatically accumulate and you
+                                can monitor remaining targets</h3>
+                        </div>
+    
+                        <div class="content-welcome-upper">
+                            <img class="content-welcome-thumbnail" src="thumbnail/Scenes/security _ lock, key, login, safety, protection, padlock, locked, unlock.svg" alt="" >
+                            <h1>Growth</h1>
+                            <h3>Build your event efficiently</h3>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- slider part end -->
+                
+
+                <!-- Button login dan signin -->
+                <div class="content-welcome-event-button">
+                    <button class="button-login">Login</button>
+                    <button class="button-signin">Signin</button>
+                </div>
+         
+            </div>
+            <!-- Konten selamat datang event organizer ended -->
+
+            <!-- !-- Konten selamat datang Sponsor --> 
+            <div class="content-welcome-sponsor">
+                
+                <div class="top-text">Sponsor</div>
+
+                <!-- slider part start -->
+                <div class="frame-slide">
+                    <div class="slides">
+                        <!-- radio button start -->
+                        <input type="radio" name="radio-btn" id="radios1">
+                        <input type="radio" name="radio-btn" id="radios2">
+                        <input type="radio" name="radio-btn" id="radios3">
+                        <input type="radio" name="radio-btn" id="radios4">
+    
+                        <div class="content-welcome-upper firsts">
+                            <img class="content-welcome-thumbnail" src="thumbnail/Scenes/maintenance, error _ website, webpage, browser, fix, repair, alert, warning, man, people.svg" alt="">
+                            <h1>Select</h1>
+                            <h3>Select events according to company references easily</h3>
+                        </div>
+    
+                        <div class="content-welcome-upper">
+                            <img class="content-welcome-thumbnail" src="thumbnail/Scenes/communication, transportation _ fly, airplane, paper, memo, man, people, transport, delivery.svgg" alt="">
+                            <h1>Find</h1>
+                            <h3>Easily find perfect sponsors for
+                                your event </h3>
+                        </div>
+    
+                        <div class="content-welcome-upper">
+                            <img class="content-welcome-thumbnail" src="thumbnail/Scenes/marketing _ promotion, protest, megaphone, woman, event, city.svg" alt="">
+                            <h1>Find</h1>
+                            <h3>Easily find perfect sponsors for
+                                your event</h3>
+                        </div>
+    
+                        <div class="content-welcome-upper">
+                            <img class="content-welcome-thumbnail" src="thumbnail/Scenes/security _ lock, key, login, safety, protection, padlock, locked, unlock.svg" alt="" >
+                            <h1>Find</h1>
+                            <h3>Easily find perfect sponsors for
+                                your event</h3>
+                        </div>
+
+                    </div>
+
+                    
+                </div>
+                <!-- slider part end -->
+
+                <!-- Button login dan signin -->
+                <div class="content-welcome-event-button">
+                    <button class="button-login">Login</button>
+                    <button class="button-signin">Signin</button>
+                </div>
+         
+            </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bagian konten sponsor -->
+    <div class="sponsor-content">
+
+        <div class="sponsor-content-feature-title">
+            Features for Sponsors
+        </div>
+
+        <div class="sponsor-content-frame">
+
+            <div class="sponsor-content-frame-slider">
+                
+            <!-- sponsor feature 1 -->
+                <div class="sponsor-content-part">
+                    <div class="sponsor-content-text">
+                        <div class="sponsor-content-text-title">Title1</div>
+                        <div class="sponsor-content-texx-inner">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div> 
+        
+                    <div class="sponsor-content-preview">
+                        <img src="thumbnail/Scenes/social media _ social network, like, thumbs up, approve, man, people, complete.svg" alt="" class="sponsor-preview-image">
+                        <button class="sponsor-content-button">View More</button>
+                    </div>
+                </div>
+
+                <!-- sponsor feature 2 -->
+                <div class="sponsor-content-part">
+                    <div class="sponsor-content-text">
+                        <div class="sponsor-content-text-title">Title2</div>
+                        <div class="sponsor-content-texx-inner">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+        
+                    <div class="sponsor-content-preview">
+                        <img src="thumbnail/Scenes/achievements _ accomplishment, target, mountain, top, flag, man, people, achievement.svg" alt="" class="sponsor-preview-image">
+                        <button class="sponsor-content-button">View More</button>
+                    </div>
+                </div>
+
+                <!-- sponsor feature 3 -->
+                <div class="sponsor-content-part">
+                    <div class="sponsor-content-text">
+                        <div class="sponsor-content-text-title">Title3</div>
+                        <div class="sponsor-content-texx-inner">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+        
+                    <div class="sponsor-content-preview">
+                        <img src="thumbnail/Scenes/e-commerce _ service, receipt, document, confirm, complete, checkmark, server, waiter.svg" alt="" class="sponsor-preview-image">
+                        <button class="sponsor-content-button">View More</button>
+                    </div>
+                </div>
+
+                <!-- sponsor feature 4 -->
+                <div class="sponsor-content-part">
+                    <div class="sponsor-content-text">
+                        <div class="sponsor-content-text-title">Title4</div>
+                        <div class="sponsor-content-texx-inner">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+        
+                    <div class="sponsor-content-preview">
+                        <img src="thumbnail/Scenes/emails, communication _ email, mail, surprise, letter, envelope, woman, people.svg" alt="" class="sponsor-preview-image">
+                        <button class="sponsor-content-button">View More</button>
+                    </div>
+                </div>
+
+                <!-- sponsor feature 5 -->
+                <div class="sponsor-content-part">
+                    <div class="sponsor-content-text">
+                        <div class="sponsor-content-text-title">Title5</div>
+                        <div class="sponsor-content-texx-inner">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+        
+                    <div class="sponsor-content-preview">
+                        <img src="thumbnail/Scenes/real estate _ house, home, moving, estate, building, outgrow, man, people.svg" alt="" class="sponsor-preview-image">
+                        <button class="sponsor-content-button">View More</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+        <div class="sponsor-content-button">
+            <button id="sponsor-btn1"></button>
+            <button id="sponsor-btn2"></button>
+            <button id="sponsor-btn3"></button>
+            <button id="sponsor-btn4"></button>
+            <button id="sponsor-btn5"></button>
+        </div>
+
+    </div>
+
+       <!-- Bagian konten event -->
+    <div class="event-content">
+
+        <div class="event-content-feature-title">
+            Features for events
+        </div>
+
+        <div class="event-content-frame">
+
+            <div class="event-content-frame-slider">
+                
+            <!-- event feature 1 -->
+                <div class="event-content-part">
+                    <div class="event-content-text">
+                        <div class="event-content-text-title">Title1</div>
+                        <div class="event-content-texx-inner">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div> 
+        
+                    <div class="event-content-preview">
+                        <img src="thumbnail/Scenes/social media _ social network, like, thumbs up, approve, man, people, complete.svg" alt="" class="event-preview-image">
+                        <button class="event-content-button">View More</button>
+                    </div>
+                </div>
+
+                <!-- event feature 2 -->
+                <div class="event-content-part">
+                    <div class="event-content-text">
+                        <div class="event-content-text-title">Title2</div>
+                        <div class="event-content-texx-inner">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+        
+                    <div class="event-content-preview">
+                        <img src="thumbnail/Scenes/achievements _ accomplishment, target, mountain, top, flag, man, people, achievement.svg" alt="" class="event-preview-image">
+                        <button class="event-content-button">View More</button>
+                    </div>
+                </div>
+
+                <!-- event feature 3 -->
+                <div class="event-content-part">
+                    <div class="event-content-text">
+                        <div class="event-content-text-title">Title3</div>
+                        <div class="event-content-texx-inner">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+        
+                    <div class="event-content-preview">
+                        <img src="thumbnail/Scenes/e-commerce _ service, receipt, document, confirm, complete, checkmark, server, waiter.svg" alt="" class="event-preview-image">
+                        <button class="event-content-button">View More</button>
+                    </div>
+                </div>
+
+                <!-- event feature 4 -->
+                <div class="event-content-part">
+                    <div class="event-content-text">
+                        <div class="event-content-text-title">Title4</div>
+                        <div class="event-content-texx-inner">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+        
+                    <div class="event-content-preview">
+                        <img src="thumbnail/Scenes/emails, communication _ email, mail, surprise, letter, envelope, woman, people.svg" alt="" class="event-preview-image">
+                        <button class="event-content-button">View More</button>
+                    </div>
+                </div>
+
+                <!-- event feature 5 -->
+                <div class="event-content-part">
+                    <div class="event-content-text">
+                        <div class="event-content-text-title">Title5</div>
+                        <div class="event-content-texx-inner">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+        
+                    <div class="event-content-preview">
+                        <img src="thumbnail/Scenes/real estate _ house, home, moving, estate, building, outgrow, man, people.svg" alt="" class="event-preview-image">
+                        <button class="event-content-button">View More</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+        <div class="event-content-button">
+            <button id="event-btn1"></button>
+            <button id="event-btn2"></button>
+            <button id="event-btn3"></button>
+            <button id="event-btn4"></button>
+            <button id="event-btn5"></button>
+        </div>
+
+    </div>
+ 
+
+    
+
+
+    <!-- Konten bagian data founder -->
+    <div class="founder-content">
+
+        <div class="founder-content-tittle">Our Team</div>
+
+        <div class="founder-content-data-founder">
+            <button class="button-founder" onclick="location = 'https://www.linkedin.com/in/bimo-priyohutomo/'">
+                <img src="image/photo-bimo.png" class="founder-image">
+                <div class="founder-name">Bimo Priyohutomo</div>
+                <div class="founder-position">CTO & COO</div>
+                <div class="founder-orgin">Information System, University of Indonesia</div>       
+            </button>
+
+            <button class="button-founder" onclick="location = 'https://www.linkedin.com/in/failasuf-indi-marsendy-703b18219/'">
+                <img src="image/shendy-image.jpg" class="founder-image">
+                <div class="founder-name">Failasuf Indi</div>
+                <div class="founder-position">CEO</div>
+                <div class="founder-orgin">Computer Sciance, University of Indonesia</div>       
+            </button>
+
+            <button class="button-founder" onclick="location = 'https://www.linkedin.com/in/syamaizarriandi/'">
+                <img src="image/photo-syam.png" class="founder-image">
+                <div class="founder-name">Syamaizar Riandi</div>
+                <div class="founder-position">CFO & CMO</div>
+                <div class="founder-orgin">Management-Finance, University of Indonesia</div>       
+            </button>
+            
+        </div>
+        
+    </div>
+
+      <!-- Konten bagian misi -->
+      <div class="mission-content">
+        <div class="mission-content-text">
+            <h1 class="mission-content-text-header">Mission</h1>
+            <div class="mission-content-text-inside">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                 nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                 dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                  sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+            </div>
+        </div>
+        <div class="mission-content-image">
+            <img class="image-indonesia" src="image/image-indonesia-maps.png">
+        </div>
+    </div>
+               
+   
+    <script src="js/sponsor-button-slider.js"></script>
+    <script src="js/event-button-slider.js"></script>
+
+    <!-- auto slider java script -->
+    <script src="js/main-landing-auto-slider.js"></script>
+    <!-- <script src="js/sponsor-auto-slider.js"></script>
+    <script src="js/event-auto-slider.js"></script>
+     -->
+{% endblock content %}

@@ -1,0 +1,128 @@
+.event-content{
+    height: 550px;
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    margin: 180px;
+    margin-top: 15px;
+    margin-bottom: 100px;
+    background: none;
+}
+
+/* main title for event feature frame */
+.event-content-feature-title{
+    font-size: 36px;
+    color: white;
+    margin-bottom: 30px;
+}
+.event-content-frame{
+    height: 420px;
+    width: 900px;
+    /* display: flex;
+    flex-direction: row; */
+    background: whitesmoke;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: 0.6s;
+}
+.event-content-frame:hover{
+    box-shadow: 0px 4px 20px 5px rgba(145,255,219,0.75);
+}
+.event-content-frame-slider{
+    display: inline-flex;  
+    transition: 1.2s; 
+}
+.event-content-part{
+    height: 420px;
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    background-color: white;    
+   
+}
+
+/* something inside part of event content */
+
+    /* left content */
+    .event-content-text{
+        width: 60%;
+        padding: 15px;
+        margin: 0 35px;
+        display: flex;
+        flex-direction: column;
+    
+        justify-content: center;
+        text-align:justify;
+        
+    }
+    .event-content-text-title{
+        font-size: 46px;
+        margin-top: -40px;
+        margin-bottom: 20px;
+    }
+    .event-content-text-inner{
+        font-size: 26px;
+    }
+
+    /* right content */
+    .event-content-preview{
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .event-preview-image{
+        width: 180px;
+        height: 180px;
+    }
+    .event-content-preview button{
+        height: 50px;
+        width: 100px;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        background-color: #5DB075;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .event-content-preview button:hover{
+        color: #5DB075;
+        background-color: white;
+        border: solid 1px #5DB075;
+    }
+
+
+/* button for sliding content */
+.event-content-button{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-content-button button{
+    cursor: pointer;
+    margin: 10px;
+    height: 13px;
+    width: 18px;
+    border-radius: 10px;
+    outline: none;
+    background: white;
+    border: solid 2px white;
+    transition: all .5s;
+}
+.event-content-button button:nth-child(1){
+    background-color: #5DB075;
+    
+}
+
+
+
+
+
+
+
+
+

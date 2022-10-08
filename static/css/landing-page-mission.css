@@ -1,0 +1,31 @@
+.mission-content{
+    display: grid;
+    grid-template-columns: 300px 2fr;
+    margin-top: 50px;
+    margin-bottom: 140px;
+}
+.mission-content-text{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+.mission-content-text-header{
+    display: flex;
+    justify-content: first baseline;
+    font-size: 32px;
+    color: lightcoral;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.mission-content-text-inside{
+    color:whitesmoke;
+    display: flex;
+    font: medium 18px;
+    text-align: justify;
+}
+.mission-content-image{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    margin-left: 10px;
+}
