@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block meta %}
+    {% block meta %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Epent</title>
+    
 
     <!-- font type ubuntu connect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,27 +14,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- css connect -->
-    <link rel="stylesheet" href="css-file/landing-page-body.css">
+    <!-- <link rel="stylesheet" href="css-file/landing-page-body.css">
     <link rel="stylesheet" href="css-file/landing-page-header.css">
     <link rel="stylesheet" href="css-file/landing-page-beranda-clone.css">
     <link rel="stylesheet" href="css-file/landing-page-mission.css">
     <link rel="stylesheet" href="css-file/landing-page-founder.css">
     <link rel="stylesheet" href="css-file/landing-page-sponsor.css">
-    <link rel="stylesheet" href="css-file/landing-page-event.css">
+    <link rel="stylesheet" href="css-file/landing-page-event.css"> -->
+
     
-
-
+    <link rel="stylesheet"  href="{% static 'css/landing-page-body.css' %}" />
+    <link rel="stylesheet"  href="{% static 'css/landing-page-header.css' %}" />
+    <link rel="stylesheet"  href="{% static 'css/landing-page-beranda-clone.css' %}" />
+    <link rel="stylesheet"  href="{% static 'css/landing-page-mission.css' %}" />
+    <link rel="stylesheet"  href="{% static 'css/landing-page-founder.css' %}" />
+    <link rel="stylesheet"  href="{% static 'css/landing-page-sponsor.css' %}" />
+    <link rel="stylesheet"  href="{% static 'css/landing-page-event.css' %}" />
+  
 
 {% endblock meta %}
 
 {% block content %}
+
 
     <!-- Bagian Header -->
     <div class="header">
 
         <!-- Epent header-logo -->
         <div class="header-logo">
-            <img class="header-icon-epent" src="icon/epent-nonbackground.png">
+            <img class="header-icon-epent" src="{% static 'icon/epent-nonbackground.png' %">
         </div>
 
         <!-- Bar navigasi menu -->
@@ -73,7 +82,7 @@
                         <input type="radio" name="radio-btn" id="radio4">
     
                         <div class="content-welcome-upper first">
-                            <img class="content-welcome-thumbnail" src="thumbnail/Scenes/communication, transportation _ fly, airplane, paper, memo, man, people, transport, delivery.svg" alt="">
+                            <img class="content-welcome-thumbnail" src="{% static 'thumbnail/Scenes/communication, transportation _ fly, airplane, paper, memo, man, people, transport, delivery.svg' %}" alt="">
                             <h1>Explore</h1>
                             <h3>Connect with companies all over
                                 country. The more connections, the
@@ -445,4 +454,5 @@
     <!-- <script src="js/sponsor-auto-slider.js"></script>
     <script src="js/event-auto-slider.js"></script>
      -->
+</body>
 {% endblock content %}
