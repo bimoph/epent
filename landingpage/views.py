@@ -1,6 +1,9 @@
 from django.shortcuts import render
 
 # Create your views here.
+def show_landingpage(request):
+    context = {}
+    return render(request, "landing_page.html", context)
 
 def show_login(request):
     context = {}
