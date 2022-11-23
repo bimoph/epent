@@ -30,7 +30,7 @@ def show_login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            response = HttpResponseRedirect(reverse('todolist:show_todolist'))
+            response = HttpResponseRedirect(reverse('eventOrganizer:event_profile'))
             response.set_cookie('last_login', str(datetime.datetime.now()))
             
             return response
