@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block meta %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Organizer</title>
+
+    <!-- google font 'Ubuntu' font style connect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- css connect -->
+    <link rel="stylesheet" href="{% static 'css/eo_general.css' %}">
+    <link rel="stylesheet" href="{% static 'css/eo_leftmenu.css' %}">
+
+    {% comment %} <link rel="stylesheet" href="css-file/test.css"> {% endcomment %}
+    
+</head>
+{% endblock meta %}
+
+{% block content %}
+<body>
+    <div class="left-menu">
+        <div class="menu-icon-epent">
+            <img class="img-epent"  src="{% static 'icon/epent-nonbackground.png' %}">
+        </div>
+
+        <form class="menu-search-box" action="https://www.google.com/search" method="GET">
+            <button type="submit">
+                <img src="{% static 'icon/eo_leftmenu_green-main/icon-search-tight.svg' %}">
+            </button>
+
+            <input class="search-txt" type="text" placeholder="    Cari perusahaan... " name="q">
+           
+            
+
+        </form>
+
+
+        <div class="menu-feature">
+            <button class="button-profil">
+                <img class="icon-profil" src="Picture/Compfest Logo 1.jfif">
+                <div class="text-feature">Profil</div>
+            </button>
+
+            <button class="button-sponsor">
+                <img class="icon-feature" src="{% static 'icon/eo_leftmenu_green-main/icon-kado.svg' %}">
+                <div class="text-feature">Sponsor</div>
+            </button>
+
+            {% comment %} <button class="button-kontraprestasi">
+                <img class="icon-feature" src="{% static 'icon/eo_leftmenu_green-main/icon-cookie.svg' %}">
+                <div class="text-feature">Kontraprestasi</div>
+            </button> {% endcomment %}
+
+            <button  class="button-pesan">
+                <img class="icon-feature" src="{% static 'icon/eo_leftmenu_green-main/icon-pesan.svg' %} ">
+                <div class="text-feature">Pesan</div>
+            </button>
+
+            <button class="button-notifikasi">
+                <img class="icon-feature" src="{% static 'icon/eo_leftmenu_green-main/icon-notification.svg' %}">
+                <div class="text-feature" >Notifikasi</div> 
+            </button>
+
+
+            {% comment %} <button class="button-belanja">
+                <img class="icon-feature" src="{% static 'icon/eo_leftmenu_green-main/icon_bag_fill.svg' %}">
+                <div class="text-feature">Belanja</div>
+            </button> {% endcomment %}
+
+        </div>
+
+        <div class="menu-footer">
+            <button class="button-logout">
+                <img class="icon-footer" src="{% static 'icon/eo_leftmenu_green-main/icon-sign_out.svg' %}">
+                <div class="text-footer">Logout</div>
+            </button>
+        </div>
+
+    </div>
+
+    <div class="content-profile">Hello World</div>
+    
+</body>
+{% endblock content %}
+
+</html>

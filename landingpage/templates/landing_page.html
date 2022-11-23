@@ -30,7 +30,9 @@
     <link rel="stylesheet"  href="{% static 'css/landing-page-founder.css' %}" />
     <link rel="stylesheet"  href="{% static 'css/landing-page-sponsor.css' %}" />
     <link rel="stylesheet"  href="{% static 'css/landing-page-event.css' %}" />
-  
+    <style>
+        a { text-decoration: none; }
+    </style>
 
 {% endblock meta %}
 
@@ -57,8 +59,8 @@
 
         <!-- Tombol Login dan Signin-->
         <div class="header-button">
-            <button class="header-button-login">Login</button>
-            <button class="header-button-signin">Signin</button>
+            <button class="header-button-login"><a href="{% url 'landingpage:login' %}">Login</a></button>
+            <button class="header-button-signin"><a href="{% url 'landingpage:signup1' %}">Signup</a></button>
         </div>
     </div>
 
@@ -443,11 +445,11 @@
     </div>
                
    
-    <script src="js/sponsor-button-slider.js"></script>
-    <script src="js/event-button-slider.js"></script>
+    <script src="{% static 'js/sponsor-button-slider.js' %}"></script>
+    <script src="{% static 'js/event-button-slider.js' %}"></script>
 
     <!-- auto slider java script -->
-    <script src="js/main-landing-auto-slider.js"></script>
+    <script src="{% static 'js/main-landing-auto-slider.js' %}"></script>
     <!-- <script src="js/sponsor-auto-slider.js"></script>
     <script src="js/event-auto-slider.js"></script>
      -->

@@ -1,0 +1,147 @@
+.left-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #28362F;
+    min-height: 100vh;
+}
+.content-profile{
+    background: snow;
+}
+
+/* 1. Menu icon epent */
+.img-epent{
+    margin: 20px;
+    height: 80px;
+}
+
+/* 2. Menu Searching */
+.menu-search-box{
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+    
+}
+    .menu-search-box input{
+        height: 28px;
+        width: 100px;
+        padding: 0px 10px;
+        border: 0;
+        border-radius: 15px;
+        outline: none;
+        color: #5DB075;
+        background-color: whitesmoke;
+    }
+
+    .menu-search-box::placeholder{
+        color: #5DB075;
+    }
+    .menu-search-box button{
+        border: 0px;
+        border-radius: 30%;
+        width: 22px;
+        background: none;
+        cursor: pointer;
+        margin-right: 5px;
+    }
+    .menu-search-box button:hover{
+        transform:translateY(-2px);
+        
+    }
+    .menu-search-box img{
+        width: 22px;
+        padding-top: 5px;
+        color: #5DB075;
+        transition: 0.3s;
+    }
+/* 3.Menu List menu feature */
+.menu-feature{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.menu-feature button{
+    margin: 8px 10px 0px 10px;
+    
+    padding: 5px;
+    height: 40px;
+    width: 200px;
+    background: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+
+    transition: .1s;
+}
+    .icon-profil{
+        height: 28px;
+        background: none;
+        border-radius: 30px;
+        margin-left: 5px;
+        margin-right: 40px;
+        border: solid 2px #5DB075;
+    }
+
+    .icon-feature{
+        height: 28px;
+        background: none;
+        border-radius: 30px;
+        margin-left: 5px;
+        margin-right: 40px;
+    }
+    .text-feature{
+        font-size: 14px;
+        color: #5DB075;
+        /* color: whitesmoke; */
+    }
+
+.menu-feature button:hover{
+    background-color: snow;
+    box-shadow: 0px 4px 20px 5px rgba(145,255,219,0.75);
+    transform: translateY(-7px);
+    
+}
+.menu-feature button:active{
+    transform: translateY(-5px);
+}
+
+/* 4. Menu logout */
+.menu-footer{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    
+
+}
+.menu-footer button{
+    display: flex;
+    flex-direction: row;
+    padding: 0px 10px 0px 15px;
+    margin: 3px;
+    height: 25px;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+    .icon-footer{
+        width: 22px;
+    }
+    .text-footer{
+        margin-left: 10px;
+        font-size: 14px;
+        color: #B05D5D;
+    }
+
+
+
+
+
+
