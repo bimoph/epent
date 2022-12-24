@@ -1,14 +1,13 @@
-import datetime
-from operator import imod
+
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
 from django.shortcuts import render
 # from todolist.models import Task
-# from todolist.forms import CreateTaskForm
+from landingpage.forms import *
 
 from django.shortcuts import redirect
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import *
 from django.contrib import messages
 
 from django.contrib.auth import authenticate, login,logout
@@ -23,27 +22,50 @@ def show_landingpage(request):
     context = {}
     return render(request, "landing_page.html", context)
 
-def show_login(request):
-    if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            login(request, user)
-            response = HttpResponseRedirect(reverse('eventOrganizer:event_profile'))
-            response.set_cookie('last_login', str(datetime.datetime.now()))
-            
-            return response
-            
-        else:
-            messages.info(request, 'Username atau Password salah!')
-    context = {}
-    return render(request, 'login.html', context)
+def register_eo1(request):
+    form = UserCreationForm()
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Akun telah berhasil dibuat, silahkan lanjutkan pengisian data!')
+            return redirect('landingpage:register_eo2')
 
-def show_signup1(request):
-    context = {}
-    return render(request,"signinp1.html", context)
+    context = {'form': form}
+    return render(request, 'register_eo1.html', context)
 
-def show_signup2(request):
-    context = {}
-    return render(request,"signinp2.html", context)
+def register_eo2(request):
+    form = EOForm()
+    if request.method == "POST":
+        form = EOForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Akun telah berhasil dibuat!')
+            return redirect('landingpage:login')
+
+    context = {'form': form}
+    return render(request, 'register_eo1.html', context)
+
+def register_company1(request):
+    form = CompanyForm()
+    if request.method == "POST":
+        form = CompanyForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Akun telah berhasil dibuat, silahkan lanjutkan pengisian data!')
+            return redirect('landingpage:register_company2')
+
+    context = {'form': form}
+    return render(request, 'register_eo1.html', context)
+
+def register_company2(request):
+    form = EOForm()
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Akun telah berhasil dibuat!')
+            return redirect('landingpage:login')
+
+    context = {'form': form}
+    return render(request, 'register_eo1.html', context)
