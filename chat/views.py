@@ -4,9 +4,9 @@ from django.shortcuts import get_object_or_404, render
 from django.http.response import JsonResponse
 from django.template import context
 from .models import Massage
-from landingpage.models import User_company, User_EO, User
 from django.db.models import Q
 import json
+from landingpage.models import User
 # Create your views here.
 
 def chatting(request, pk:int):
