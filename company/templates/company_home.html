@@ -46,7 +46,7 @@
 
 
         <div class="menu-feature">
-            <a href="{% url 'eventOrganizer:event_profile' %}">
+            <a href="{% url 'company:company_profile' %}">
                 <button class="button-profil">
                     <img class="icon-profil" src="Picture/Compfest Logo 1.jfif">
                     <div class="text-feature">Profil</div>
@@ -55,7 +55,7 @@
 
             <button class="button-sponsor">
                 <img class="icon-feature" src="{% static 'image/eo_leftmenu_green-main/icon-kado.svg' %}">
-                <div class="text-feature">Sponsor</div>
+                <div class="text-feature">Event</div>
             </button>
 
             {% comment %} <button class="button-kontraprestasi">
@@ -90,30 +90,7 @@
 
     </div>
 
-
-    <div class="content-profile">
-        <h2>Halaman Profile</h2>
-        {% if not data_event %}
-            <p>Data event belum diisi</p>
-            <a href="{% url 'eventOrganizer:event_lengkapi_profile' %}"><button>Lengkapi Profile</button></a>
-        {% else %}
-    
-            <p>Nama Event: {{data_event.name_event}}</p>
-            {% if data_event.logo_image %}
-                <img src="{{data_event.logo_image.url}}">
-            {% endif %}
-            <p>Email Event: {{data_event.email}}</p>
-            <p>Alamat Event: {{data_event.alamat}}</p>
-            <p>Link LinkedIn Event: {{data_event.link_linkedin}}</p>
-            <p>Link Instagram Event: {{data_event.link_instagram}}</p>
-    
-    
-        {% endif %}
-
-    </div>
-
-
-    <p></p>
+    <div class="content-profile">Hello {{ user }}</div>
     
 </body>
 {% endblock content %}

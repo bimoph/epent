@@ -34,7 +34,7 @@ def show_login(request):
             return redirect('eventOrganizer:event_home')
         elif user is not None and user.is_company:
             login(request, user) 
-            return redirect('landingpage:register_company2')
+            return redirect('company:company_home')
         else:
             messages.info(request, 'Username atau Password salah!')
     context = {}

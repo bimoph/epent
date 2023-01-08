@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Organizer</title>
+    <title>Company</title>
     <link rel="icon" href="{% static 'image/epent-nonbackground.png'%}" >
 
     <!-- google font 'Ubuntu' font style connect -->
@@ -38,7 +38,7 @@
                 <img src="{% static 'image/eo_leftmenu_green-main/icon-search-tight.svg' %}">
             </button>
 
-            <input class="search-txt" type="text" placeholder="    Cari perusahaan... " name="q">
+            <input class="search-txt" type="text" placeholder="    Cari Event... " name="q">
            
             
 
@@ -55,7 +55,7 @@
 
             <button class="button-sponsor">
                 <img class="icon-feature" src="{% static 'image/eo_leftmenu_green-main/icon-kado.svg' %}">
-                <div class="text-feature">Sponsor</div>
+                <div class="text-feature">Event</div>
             </button>
 
             {% comment %} <button class="button-kontraprestasi">
@@ -93,19 +93,20 @@
 
     <div class="content-profile">
         <h2>Halaman Profile</h2>
-        {% if not data_event %}
-            <p>Data event belum diisi</p>
-            <a href="{% url 'eventOrganizer:event_lengkapi_profile' %}"><button>Lengkapi Profile</button></a>
+        {% if not data_company %}
+            <p>Data company belum diisi</p>
+            <a href="{% url 'company:company_lengkapi_profile' %}"><button>Lengkapi Profile</button></a>
         {% else %}
     
-            <p>Nama Event: {{data_event.name_event}}</p>
-            {% if data_event.logo_image %}
-                <img src="{{data_event.logo_image.url}}">
+            <p>Nama Company: {{data_company.name_company}}</p>
+            {% if data_company.logo_image %}
+                <img src="{{data_company.logo_image.url}}">
             {% endif %}
-            <p>Email Event: {{data_event.email}}</p>
-            <p>Alamat Event: {{data_event.alamat}}</p>
-            <p>Link LinkedIn Event: {{data_event.link_linkedin}}</p>
-            <p>Link Instagram Event: {{data_event.link_instagram}}</p>
+            <p>Email Company: {{data_company.email}}</p>
+            <p>Alamat Company: {{data_company.alamat}}</p>
+            <p>Bidang Usaha: {{data_company.bidang_usaha}}</p>
+            <p>Link LinkedIn Company: {{data_company.link_linkedin}}</p>
+            <p>Link Instagram Company: {{data_company.link_instagram}}</p>
     
     
         {% endif %}

@@ -22,5 +22,10 @@ class Event(models.Model):
 class Company(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name_company = models.CharField(max_length=50)
+    logo_image = models.ImageField(blank=True, null=True, upload_to="images/")
+    bidang_usaha = models.CharField(max_length=50, blank=True, null=True)
+    alamat = models.TextField(blank=True, null=True)
     email = models.EmailField(blank=True, null=True)
+    link_linkedin = models.CharField(max_length=50, blank=True, null=True)
+    link_instagram = models.CharField(max_length=50, blank=True, null=True)
 

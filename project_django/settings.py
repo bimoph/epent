@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'landingpage',
     'eventOrganizer',
     'chat',
+    'company',
 ]
 
 MIDDLEWARE = [
