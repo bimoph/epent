@@ -5,5 +5,7 @@ from chat.views import *
 app_name = "chat"
 
 urlpatterns = [
-    path('', chatting, name="chatting")
+    path('<int:pk>/', chatting, name="chatting"),
+    path('room/', listUser, name="listUser"),
+    
 ]
