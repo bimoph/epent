@@ -31,7 +31,7 @@ def show_login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None and user.is_EO:
             login(request, user) 
-            return redirect('landingpage:register_eo2')
+            return redirect('eventOrganizer:event_home')
         elif user is not None and user.is_company:
             login(request, user) 
             return redirect('landingpage:register_company2')
@@ -58,7 +58,7 @@ def register(request):
         form = SignUpForm()
     return render(request,'register.html', {'form': form, 'msg': msg})
 
-def register_eo1(request):
+def register_eo1(request): # ga digunain
     form = UserCreationForm()
     if request.method == "POST":
         form = UserCreationForm(request.POST)
@@ -73,12 +73,15 @@ def register_eo1(request):
 # @csrf_extempt
 def register_eo2(request):
     # form = EOForm()
+    if Event.objects.filter(user=request.user):
+        # print(Event.objects.filter(user=request.user))
+        return redirect('eventOrganizer:event_home')
     if request.method == "POST":
-        new_EO = User_EO(user=request.user, 
-                        name_event=request.POST.get('nama_event'),
-                        email= request.POST.get('email'))
+        
+        new_EO = Event(user=request.user, 
+                        name_event=request.POST.get('nama_event'))
         new_EO.save()
-        return redirect('eventOrganizer:event_profile')
+        return redirect('eventOrganizer:event_home')
         # form = EOForm(request.POST)
         # if form.is_valid():
         #     form.save()
@@ -88,7 +91,7 @@ def register_eo2(request):
     context = {}
     return render(request, 'register_eo2.html', context)
 
-def register_company1(request):
+def register_company1(request): # ga digunain
     form = CompanyForm()
     if request.method == "POST":
         form = CompanyForm(request.POST)

@@ -50,13 +50,14 @@ class SignUpForm(UserCreationForm):
         )
     )
 
+
     class Meta:
         model = User
         fields = ('username', 'password1', 'password2', 'is_EO', 'is_company')
 
 class EOForm(forms.ModelForm):    
     class Meta:
-        model = User_EO
+        model = Event
         fields = ('user', 'name_event', 'email')
         exclude = ['user']
         # widgets = {
@@ -76,6 +77,6 @@ class EOForm(forms.ModelForm):
 
 class CompanyForm(forms.ModelForm):    
     class Meta:
-        model = User_company
+        model = Company
         fields = ('user', 'name_company', 'email')
         exclude = ['user']

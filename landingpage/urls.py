@@ -4,6 +4,8 @@ from landingpage.views import *
 
 app_name = "landingpage"
 
+
+
 urlpatterns = [
     path('', show_landingpage, name='landingpage'),
     path('login', show_login, name='login'),

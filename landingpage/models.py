@@ -9,14 +9,18 @@ class User(AbstractUser):
     is_EO = models.BooleanField('Is EO', default=False)
     is_company = models.BooleanField('Is company', default=False)
 
-class User_EO(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+class Event(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     name_event = models.CharField(max_length=50)
-    email = models.EmailField()
+    logo_image = models.ImageField(blank=True, null=True, upload_to="images/")
+    email = models.EmailField(blank=True, null=True)
+    alamat = models.TextField(blank=True, null=True)
+    link_linkedin = models.CharField(max_length=50, blank=True, null=True)
+    link_instagram = models.CharField(max_length=50, blank=True, null=True)
 
 
-class User_company(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+class Company(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     name_company = models.CharField(max_length=50)
-    email = models.EmailField()
+    email = models.EmailField(blank=True, null=True)
 
